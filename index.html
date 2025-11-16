@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarasso Coffee - Kopi Asli Nusantara</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Nikmati rasa Tarasso Coffee - Kopi Asli Nusantara terbaik dari Tarasso Coffee, kedai kopi lokal asli Bogor. Kami menyajikan kopi botolan, drip coffee, dan espresso pouch berkualitas.">
+    <meta name="keywords" content="Tarasso Coffee, Kopi Asli Nusantara, kedai kopi bogor, kopi lokal, kopi botolan, drip coffee, espresso pouch, kopi aren, menu tarasso coffee">
+    <meta name="author" content="Tarasso Coffee">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Tarasso Coffee - Kopi Asli Nusantara" />
+    <meta property="og:description" content="Nikmati rasa kopi terbaik dari Tarasso Coffee, kedai kopi lokal asli Bogor. Kami menyajikan kopi botolan, drip coffee, dan espresso pouch berkualitas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://tarassocoffee.pages.dev/img/tarasso.webp" />
+    <meta property="og:url" content="https://tarassocoffee-id.github.io/tarassocoffee/" /> 
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tarasso Coffee - Kopi Asli Nusantara">
+    <meta name="twitter:description" content="Nikmati rasa kopi terbaik dari Tarasso Coffee, kedai kopi lokal asli Bogor. Kami menyajikan kopi botolan, drip coffee, dan espresso pouch berkualitas." />
+    <meta name="twitter:image" content="https://tarassocoffee.pages.dev/img/tarasso.webp">
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Konfigurasi Tailwind Custom -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tarasso-green': '#2A4A42', // hijau tua
+                        'tarasso-beige': '#FBF8F3', // krem
+                        'tarasso-brown': '#4a2c2a', // coklat tua
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FBF8FF;
+            color: #4a2c2a;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-tarasso-beige">
+
+    <!-- Header / Navbar -->
+    <header class="bg-tarasso-beige/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#home" class="flex items-center space-x-2">
+                <img class="h-10 w-auto" 
+                     src="/img/tarasso_coffee.webp" 
+                     alt="Logo Tarasso Coffee"
+                     onerror="this.src='https://placehold.co/150x50/2A4A42/FFFFFF?text=Tarasso.co'">
+            </a>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="text-tarasso-brown hover:text-tarasso-green font-semibold transition duration-300">Home</a>
+                <a href="#produk" class="text-tarasso-brown hover:text-tarasso-green font-semibold transition duration-300">Produk</a>
+                <a href="#jasa" class="text-tarasso-brown hover:text-tarasso-green font-semibold transition duration-300">Jasa</a>
+                <a href="#menu" class="text-tarasso-brown hover:text-tarasso-green font-semibold transition duration-300">Menu</a>
+                <a href="#testimoni" class="text-tarasso-brown hover:text-tarasso-green font-semibold transition duration-300">Testimoni</a>
+                <a href="#kontak" class="bg-tarasso-green text-white px-5 py-2 rounded-full font-bold shadow-lg hover:bg-tarasso-green/90 transition duration-300 transform hover:scale-105">Pesan Sekarang</a>
+            </div>
+            
+            <!-- Tombol Menu Mobile -->
+            <button id="menu-btn" class="md:hidden text-tarasso-brown">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Menu Mobile (Dropdown) -->
+        <div id="menu-mobile" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#home" class="block px-6 py-3 text-tarasso-brown hover:bg-gray-100">Home</a>
+            <a href="#produk" class="block px-6 py-3 text-tarasso-brown hover:bg-gray-100">Produk</a>
+            <a href="#jasa" class="block px-6 py-3 text-tarasso-brown hover:bg-gray-100">Jasa</a>
+            <a href="#menu" class="block px-6 py-3 text-tarasso-brown hover:bg-gray-100">Menu</a>
+            <a href="#testimoni" class="block px-6 py-3 text-tarasso-brown hover:bg-gray-100">Testimoni</a>
+            <a href="#kontak" class="block px-6 py-3 m-4 text-center bg-tarasso-green text-white rounded-full font-bold">Pesan Sekarang</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="container mx-auto px-6 pt-16 pb-24 flex flex-col md:flex-row items-center gap-12">
+            <!-- Teks Hero -->
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl lg:text-6xl font-extrabold text-tarasso-brown !leading-tight">
+                    Rasa Kopi <span class="text-tarasso-green">Terbaik</span>,
+                    Untuk Momen Terbaikmu.
+                </h1>
+                <p class="mt-6 text-lg text-gray-600">
+                    Selamat datang di Tarasso Coffee! Kami menyajikan biji kopi pilihan dan racikan spesial dari Bogor. 'Tarasso' artinya 'Terasa'—rasakan bedanya di setiap tegugan.
+                </p>
+                <a href="#produk" class="mt-10 inline-block bg-tarasso-green text-white px-8 py-3 rounded-full font-bold text-lg shadow-xl hover:bg-tarasso-green/90 transition duration-300 transform hover:scale-105">
+                    Lihat Produk Kami
+                </a>
+            </div>
+            <!-- Gambar Hero -->
+            <div class="md:w-1/2">
+                <img src="/img/special.webp" 
+                     alt="Kopi Special Aren Tarasso Coffee" 
+                     class="rounded-3xl shadow-2xl w-full h-auto object-cover"
+                     onerror="this.src='https://placehold.co/600x400/4a2c2a/FFFFFF?text=Special+Aren'">
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section id="produk" class="bg-white py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-tarasso-brown mb-4">Produk Unggulan Kami</h2>
+                <p class="text-center text-gray-600 text-lg max-w-2xl mx-auto mb-16">
+                    Dari kopi botolan yang praktis, drip coffee instan, hingga pouch espresso. Kami punya semua untuk menemani harimu.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    
+                    <!-- Produk 1: Kopi Botolan -->
+                    <div class="bg-tarasso-beige rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition-transform duration-300">
+                        <img src="/img/tarasso_coffee_bottle_edition.webp" 
+                             alt="Kopi Botolan Tarasso Coffee" 
+                             class="w-full h-80 object-cover"
+                             onerror="this.src='https://placehold.co/400x300/2A4A42/FFFFFF?text=Kopi+Botolan'">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold text-tarasso-brown">Kopi Susu Botolan</h3>
+                            <p class="mt-3 text-gray-600 flex-grow">
+                                Sukses bikin nyaman! Kopi susu kekinian dalam kemasan botol 500ml, siap dinikmati kapan saja, di mana saja.
+                            </p>
+                            <a href="#kontak" class="mt-6 inline-block text-center bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">
+                                Pesan Ini
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Produk 2: Drip Coffee -->
+                    <div class="bg-tarasso-beige rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition-transform duration-300">
+                        <img src="/img/drip_coffee.webp" 
+                             alt="Drip Coffee Tarasso" 
+                             class="w-full h-80 object-cover"
+                             onerror="this.src='https://placehold.co/400x300/2A4A42/FFFFFF?text=Drip+Coffee'">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold text-tarasso-brown">Drip Coffee Instan</h3>
+                            <p class="mt-3 text-gray-600 flex-grow">
+                                Ngopi premium tanpa ribet. Kemasan kopi instan paling simple, cocok buat nemenin waktu pentingmu. Tersedia Arabica Sunda Preanger & Aceh Gayo.
+                            </p>
+                            <a href="#kontak" class="mt-6 inline-block text-center bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">
+                                Pesan Ini
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Produk 3: Espresso Pouch -->
+                    <div class="bg-tarasso-beige rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:scale-105 transition-transform duration-300">
+                        <img src="/img/pouch.webp" 
+                             alt="Espresso Pouch Tarasso" 
+                             class="w-full h-80 object-cover"
+                             onerror="this.src='https://placehold.co/400x300/2A4A42/FFFFFF?text=Espresso+Pouch'">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold text-tarasso-brown">Espresso Pouch</h3>
+                            <p class="mt-3 text-gray-600 flex-grow">
+                                Mager nyeduh kopi? Kemasan praktis dan minimalis ini siap nemenin kamu push aktivitas. Tersedia varian Arabica & Robusta.
+                            </p>
+                            <a href="#kontak" class="mt-6 inline-block text-center bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">
+                                Pesan Ini
+                            </a>
+                        </div>
+                    </div>
+                                        
+                </div>
+            </div>
+        </section>
+
+        <!-- Jasa Roasting & Kopi Keliling -->
+        <section id="jasa" class="bg-tarasso-beige py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-tarasso-brown mb-4">
+                    Jasa Roasting & Kopi Keliling
+                </h2>
+                <p class="text-center text-gray-600 text-lg max-w-2xl mx-auto mb-16">
+                    Selain produk jadi, Tarasso juga melayani jasa roasting biji kopi, custom blend untuk brand kamu,
+                    serta layanan kopi keliling untuk berbagai event.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card Roasting -->
+                    <article class="bg-tarasso-beige rounded-3xl shadow-xl overflow-hidden flex flex-col">
+                        <div class="bg-tarasso-brown flex items-center justify-center h-28">
+                            <h3 class="text-white text-3xl md:text-4xl font-extrabold tracking-wide">
+                                Roasting
+                            </h3>
+                        </div>
+                        <img
+                            src="https://tarassocoffee.pages.dev/img/roasting.webp"
+                            alt="Jasa Roasting Biji Kopi Tarasso"
+                            class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/800x400/4a2c2a/FFFFFF?text=Roasting';"
+                        >
+                        <div class="p-8 flex flex-col flex-1">
+                            <h4 class="text-xl font-bold mb-3">Jasa Roasting Biji Kopi</h4>
+                            <p class="text-gray-700 leading-relaxed flex-1">
+                                Layanan roasting biji kopi sesuai profil rasa yang diinginkan. Cocok untuk UMKM,
+                                kedai kopi rumahan, dan reseller. Minimal order fleksibel, konsultasi rasa bisa
+                                disesuaikan.
+                            </p>
+                            <button
+                                class="qris-trigger mt-6 w-full rounded-full bg-gray-100 hover:bg-gray-200 text-tarasso-green font-semibold py-3 transition">
+                                Pesan Roasting
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Card Custom Blend -->
+                    <article class="bg-tarasso-beige rounded-3xl shadow-xl overflow-hidden flex flex-col">
+                        <div class="bg-tarasso-brown flex items-center justify-center h-28">
+                            <h3 class="text-white text-3xl md:text-4xl font-extrabold tracking-wide text-center">
+                                Custom Blend
+                            </h3>
+                        </div>
+                        <img
+                            src="https://tarassocoffee.pages.dev/img/custom-blend.webp"
+                            alt="Layanan Custom Blend Tarasso Coffee"
+                            class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/800x400/4a2c2a/FFFFFF?text=Custom+Blend';"
+                        >
+                        <div class="p-8 flex flex-col flex-1">
+                            <h4 class="text-xl font-bold mb-3">Roasting + Blending</h4>
+                            <p class="text-gray-700 leading-relaxed flex-1">
+                                Bantu racik blend kopi khas bisnismu. Konsultasi profil rasa, roasting, sampai
+                                opsi pengemasan simple yang cocok dengan branding usahamu.
+                            </p>
+                            <button
+                                class="qris-trigger mt-6 w-full rounded-full bg-gray-100 hover:bg-gray-200 text-tarasso-green font-semibold py-3 transition">
+                                Konsultasi Blend
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Card Kopi Keliling -->
+                    <article class="bg-tarasso-beige rounded-3xl shadow-xl overflow-hidden flex flex-col">
+                        <div class="bg-tarasso-brown flex items-center justify-center h-28">
+                            <h3 class="text-white text-3xl md:text-4xl font-extrabold tracking-wide text-center">
+                                Kopi Keliling
+                            </h3>
+                        </div>
+                        <img
+                            src="https://tarassocoffee.pages.dev/img/tarasso-kopi-keliling.webp"
+                            alt="Jasa Kopi Keliling Tarasso untuk Event"
+                            class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/800x400/4a2c2a/FFFFFF?text=Kopi+Keliling';"
+                        >
+                        <div class="p-8 flex flex-col flex-1">
+                            <h4 class="text-xl font-bold mb-3">Jasa Kopi Keliling & Event</h4>
+                            <p class="text-gray-700 leading-relaxed flex-1">
+                                Layanan kopi keliling untuk event kampus, kantor, pesta, dan hajatan.
+                                Paket bisa disesuaikan: booth, barista, dan varian menu kopi Tarasso
+                                untuk memeriahkan acara.
+                            </p>
+                            <button
+                                class="qris-trigger mt-6 w-full rounded-full bg-gray-100 hover:bg-gray-200 text-tarasso-green font-semibold py-3 transition">
+                                Booking Kopi Keliling
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="bg-tarasso-beige py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-tarasso-brown mb-16">
+                    Daftar Menu Tarasso Coffee
+                </h2>
+
+                <!-- Kategori: Aren & Flavour -->
+                <h3 class="text-2xl font-bold text-tarasso-brown mb-6 flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2.08 2.08 0 00-2.08-2.08H6.652a2.08 2.08 0 00-2.08 2.08c0 1.15.93 2.08 2.08 2.08h10.696a2.08 2.08 0 002.08-2.08zM19.428 15.428V8.347a2.08 2.08 0 00-2.08-2.08H6.652a2.08 2.08 0 00-2.08 2.08v7.081m14.856 0c.346.069.702.104 1.06.104 1.767 0 3.2-1.433 3.2-3.2s-1.433-3.2-3.2-3.2c-.358 0-.714.035-1.06.104m-12.736 0c-.346.069-.702.104-1.06.104-1.767 0-3.2-1.433-3.2-3.2s1.433-3.2 3.2-3.2c.358 0 .714.035 1.06.104" /></svg>
+                    Aren & Flavour (Ice)
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <!-- menu items ... (tidak diubah, sama seperti skrip awal) -->
+                    <!-- Saya biarkan persis seperti kode kamu sebelumnya -->
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-tarasso-brown">Special Aren</h4>
+                            <p class="text-lg font-semibold text-tarasso-green mt-2">Rp 15.000</p>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-tarasso-brown">Sweet Creamy</h4>
+                            <p class="text-lg font-semibold text-tarasso-green mt-2">Rp 15.000</p>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-tarasso-brown">Forte Aren</h4>
+                            <p class="text-lg font-semibold text-tarasso-green mt-2">Rp 17.000</p>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-tarasso-brown">Robusta Aren</h4>
+                            <p class="text-lg font-semibold text-tarasso-green mt-2">Rp 15.000</p>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-tarasso-brown">Hazelnut</h4>
+                            <p class="text-lg font-semibold text-tarasso-green mt-2">Rp 17.000</p>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-tarasso-brown">Caramel Machiato</h4>
+                            <p class="text-lg font-semibold text-tarasso-green mt-2">Rp 20.000</p>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-tarasso-brown">Asian Dolce Latte</h4>
+                            <p class="text-lg font-semibold text-tarasso-green mt-2">Rp 17.000</p>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-tarasso-brown">Mochacino</h4>
+                            <p class="text-lg font-semibold text-tarasso-green mt-2">Rp 17.000</p>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                </div>
+
+                <!-- Manual Brew, Bottle, dst (sama persis dengan skrip awal kamu) -->
+                <!-- ... (saya pertahankan tanpa perubahan) ... -->
+
+                <!-- Kategori: Manual Brew -->
+                <h3 class="text-2xl font-bold text-tarasso-brown mb-6 flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    Manual Brew
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-tarasso-brown">V60</h4>
+                            <p class="text-lg font-semibold text-tarasso-green mt-2">Rp 23.000</p>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-tarasso-brown">Vietnam Drip</h4>
+                            <p class="text-lg font-semibold text-tarasso-green mt-2">Rp 25.000</p>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-tarasso-brown">Tubruk</h4>
+                            <p class="text-lg font-semibold text-tarasso-green mt-2">Rp 17.000</p>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-tarasso-brown">Cold Brew</h4>
+                            <p class="text-lg font-semibold text-tarasso-green mt-2">Rp 25.000</p>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                </div>
+
+                <!-- Kategori: Bottle -->
+                <h3 class="text-2xl font-bold text-tarasso-brown mb-6 flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" /><path stroke-linecap="round" stroke-linejoin="round" d="M14 2v6h6" /></svg>
+                    Bottle
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Isi persis seperti kode awal (Special Aren, Sweet Creamy, dll.) -->
+                    <!-- ... -->
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <h4 class="text-xl font-bold text-tarasso-brown mb-3">Special Aren</h4>
+                        <div class="space-y-2 text-gray-700 flex-grow">
+                            <div class="flex justify-between"><p>Small</p> <p class="font-semibold">Rp 20.000</p></div>
+                            <div class="flex justify-between"><p>Medium</p> <p class="font-semibold">Rp 40.000</p></div>
+                            <div class="flex justify-between"><p>Large</p> <p class="font-semibold">Rp 75.000</p></div>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <h4 class="text-xl font-bold text-tarasso-brown mb-3">Sweet Creamy</h4>
+                        <div class="space-y-2 text-gray-700 flex-grow">
+                            <div class="flex justify-between"><p>Small</p> <p class="font-semibold">Rp 20.000</p></div>
+                            <div class="flex justify-between"><p>Medium</p> <p class="font-semibold">Rp 40.000</p></div>
+                            <div class="flex justify-between"><p>Large</p> <p class="font-semibold">Rp 75.000</p></div>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <h4 class="text-xl font-bold text-tarasso-brown mb-3">Forte Aren</h4>
+                        <div class="space-y-2 text-gray-700 flex-grow">
+                            <div class="flex justify-between"><p>Small</p> <p class="font-semibold">Rp 23.000</p></div>
+                            <div class="flex justify-between"><p>Medium</p> <p class="font-semibold">Rp 45.000</p></div>
+                            <div class="flex justify-between"><p>Large</p> <p class="font-semibold">Rp 80.000</p></div>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <h4 class="text-xl font-bold text-tarasso-brown mb-3">Robusta Aren</h4>
+                        <div class="space-y-2 text-gray-700 flex-grow">
+                            <div class="flex justify-between"><p>Small</p> <p class="font-semibold">Rp 20.000</p></div>
+                            <div class="flex justify-between"><p>Medium</p> <p class="font-semibold">Rp 40.000</p></div>
+                            <div class="flex justify-between"><p>Large</p> <p class="font-semibold">Rp 75.000</p></div>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <h4 class="text-xl font-bold text-tarasso-brown mb-3">Chocolate</h4>
+                        <div class="space-y-2 text-gray-700 flex-grow">
+                            <div class="flex justify-between"><p>Small</p> <p class="font-semibold">Rp 23.000</p></div>
+                            <div class="flex justify-between"><p>Medium</p> <p class="font-semibold">Rp 40.000</p></div>
+                            <div class="flex justify-between"><p>Large</p> <p class="font-semibold">Rp 70.000</p></div>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <h4 class="text-xl font-bold text-tarasso-brown mb-3">Matcha</h4>
+                        <div class="space-y-2 text-gray-700 flex-grow">
+                            <div class="flex justify-between"><p>Small</p> <p class="font-semibold">Rp 20.000</p></div>
+                            <div class="flex justify-between"><p>Medium</p> <p class="font-semibold">Rp 30.000</p></div>
+                            <div class="flex justify-between"><p>Large</p> <p class="font-semibold">Rp 55.000</p></div>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <h4 class="text-xl font-bold text-tarasso-brown mb-3">Thai Tea</h4>
+                        <div class="space-y-2 text-gray-700 flex-grow">
+                            <div class="flex justify-between"><p>Small</p> <p class="font-semibold">Rp 20.000</p></div>
+                            <div class="flex justify-between"><p>Medium</p> <p class="font-semibold">Rp 35.000</p></div>
+                            <div class="flex justify-between"><p>Large</p> <p class="font-semibold">Rp 55.000</p></div>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+                        <h4 class="text-xl font-bold text-tarasso-brown mb-3">Americano</h4>
+                        <div class="space-y-2 text-gray-700 flex-grow">
+                            <div class="flex justify-between"><p>Small</p> <p class="font-semibold">Rp 15.000</p></div>
+                            <div class="flex justify-between"><p>Medium</p> <p class="font-semibold">Rp 30.000</p></div>
+                            <div class="flex justify-between"><p>Large</p> <p class="font-semibold">Rp 50.000</p></div>
+                        </div>
+                        <button class="qris-trigger mt-4 w-full bg-tarasso-green/10 text-tarasso-green font-bold px-6 py-2 rounded-full hover:bg-tarasso-green/20 transition duration-300">Pesan</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section id="testimoni" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-tarasso-brown mb-16">
+                    Apa Kata Sobat Tarasso?
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-tarasso-beige p-8 rounded-2xl shadow-lg border border-gray-100">
+                        <p class="text-lg text-gray-700 italic">
+                            "Kopinya mantap jiwa! Rasa Special Aren-nya pas banget, gak kemanisan dan kopinya 'terasa' banget. Highly recommended buat warga Bogor!"
+                        </p>
+                        <div class="mt-6 flex items-center">
+                            <img class="h-12 w-12 rounded-full object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=AR" alt="Foto Arief">
+                            <div class="ml-4">
+                                <p class="font-bold text-tarasso-brown">Arief Budiman</p>
+                                <p class="text-sm text-gray-500">Penikmat Kopi, Bogor</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-tarasso-beige p-8 rounded-2xl shadow-lg border border-gray-100">
+                        <p class="text-lg text-gray-700 italic">
+                            "Praktis banget Espresso Pouch-nya. Sering saya bawa buat di kantor. Nggak perlu repot nyeduh, rasanya tetep nendang. Mantap Tarasso!"
+                        </p>
+                        <div class="mt-6 flex items-center">
+                            <img class="h-12 w-12 rounded-full object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=CI" alt="Foto Citra">
+                            <div class="ml-4">
+                                <p class="font-bold text-tarasso-brown">Citra Lestari</p>
+                                <p class="text-sm text-gray-500">Karyawan Swasta</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-tarasso-beige p-8 rounded-2xl shadow-lg border border-gray-100">
+                        <p class="text-lg text-gray-700 italic">
+                            "Nyobain Drip Coffee Gayo-nya. Wah, beneran berasa ngopi di cafe. Aromanya dapet, rasanya kompleks. Bakal jadi langganan tetap ini."
+                        </p>
+                        <div class="mt-6 flex items-center">
+                            <img class="h-12 w-12 rounded-full object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=RD" alt="Foto Rian">
+                            <div class="ml-4">
+                                <p class="font-bold text-tarasso-brown">Rian Dwi</p>
+                                <p class="text-sm text-gray-500">Mahasiswa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak Section -->
+        <section id="kontak" class="bg-tarasso-beige py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-tarasso-brown">
+                        Siap Merasakan Kenikmatan Kopi Kami?
+                    </h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-xl mx-auto">
+                        Hubungi kami langsung melalui WhatsApp, Instagram, atau kunjungi kedai kami.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Alamat -->
+                    <div class="lg:col-span-1 space-y-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg flex items-start gap-4">
+                            <div class="text-tarasso-green flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-tarasso-brown">Alamat Kami</h4>
+                                <p class="text-gray-600 mt-1">
+                                    Permata Bogor Residence Blok A16-15
+                                    Cilebut, Kab. Bogor, Jawa Barat, Indonesia
+                                </p>
+                                <a href="https://www.google.com/maps/place/Tarasso+Coffee/@-6.542917,106.7961393,397m/data=!3m1!1e3!4m6!3m5!1s0x2e69c3452a9c02e1:0x3c508c00d45e2db7!8m2!3d-6.5428654!4d106.7969939!16s%2Fg%2F11vrpd09jr?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="mt-3 inline-flex items-center gap-1 font-semibold text-tarasso-green hover:underline">
+                                    Lihat di Google Maps
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp -->
+                        <div class="bg-white p-6 rounded-2xl shadow-lg flex items-start gap-4">
+                            <div class="text-tarasso-green flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.595 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.068-.315-.099-.445.099-.13.198-.51.646-.627.775-.117.13-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.117-.198-.01-.304.088-.403.087-.088.197-.232.296-.346.1-.114.13-.198.198-.33.068-.13.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.117-.007-.247-.007-.375-.007s-.315.05-.48.247c-.165.198-.63.62-.765.775-.135.158-.27.313-.27.562s.27.92.306 1.007c.038.088.592 1.523 1.442 2.056.85.533 1.533.85 2.067 1.007.534.158.985.13.135.088.304-.182 1.17-.48 1.336-.943.165-.46.165-.85.117-.943-.05-.099-.182-.158-.38-.257z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-tarasso-brown">WhatsApp</h4>
+                                <p class="text-gray-600 mt-1">+62 895-1675-2545</p>
+                                <a href="https://wa.me/6289516752545" target="_blank" class="mt-3 inline-flex items-center gap-1 font-semibold text-tarasso-green hover:underline">
+                                    Chat Sekarang
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Instagram -->
+                        <div class="bg-white p-6 rounded-2xl shadow-lg flex items-start gap-4">
+                            <div class="text-tarasso-green flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.917 3.917 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.703.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372.85.04 1.12.048 3.297.048s2.448-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372.526-.205.972-.478 1.417-.923.445-.444.719-.89.923-1.416.198-.51.333-1.09.372-1.942.04-.85.048-1.12.048-3.297s-.01-2.448-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.916 3.916 0 0 0-.923-1.417A3.916 3.916 0 0 0 13.24.42c-.51-.198-1.09-.333-1.942-.372C10.448.01 10.172 0 7.998 0h.003zm-.002 1.442c2.146 0 2.389.009 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.282.24.705.275 1.486.037.843.047 1.086.047 3.232s-.01 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.086.047-3.232.047s-2.389-.009-3.232-.047c-.78-.036-1.203-.166-1.485-.276a2.47 2.47 0 0 1-.92-.598 2.47 2.47 0 0 1-.598-.919c-.11-.282-.24-.705-.275-1.485-.038-.843-.047-1.086-.047-3.232s.01-2.389.047-3.232c.035-.78.166-1.204.275-1.486.145-.373.319-.64.599-.92.28-.28.546.453.92-.598.282-.11.705-.24 1.485-.276.843-.037 1.086.046 3.232.046h.002zM8 3.882a4.118 4.118 0 1 0 0 8.236 4.118 4.118 0 0 0 0-8.236zm0 6.76A2.642 2.642 0 1 1 8 5.36a2.642 2.642 0 0 1 0 5.282zm4.935-6.79a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-tarasso-brown">Instagram</h4>
+                                <p class="text-gray-600 mt-1">@tarassocoffee.id</p>
+                                <a href="https://www.instagram.com/tarassocoffee.id" target="_blank" class="mt-3 inline-flex items-center gap-1 font-semibold text-tarasso-green hover:underline">
+                                    Follow Kami
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Peta -->
+                    <div class="lg:col-span-2 bg-white rounded-2xl shadow-lg p-4">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.120519504812!2d106.7969939!3d-6.5428654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c3452a9c02e1%3A0x3c508c00d45e2db7!2sTarasso%20Coffee!5e0!3m2!1sen!2sid!4v1730872517849!5m2!1sen!2sid" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-lg min-h-[450px]">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-tarasso-green text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div class="mb-6 md:mb-0">
+                    <img class="h-10 w-auto invert" 
+                         src="/img/tarasso_coffee.webp" 
+                         alt="Logo Tarasso Coffee Putih"
+                         onerror="this.src='https://placehold.co/150x50/FFFFFF/2A4A42?text=Tarasso.co'">
+                    <p class="mt-4 text-gray-300 max-w-xs">
+                        Kedai Kopi Lokal Bogor. 'Tarasso' artinya 'Terasa'.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <p class="font-bold text-lg">Temukan Kami</p>
+                    <a href="https://www.instagram.com/tarassocoffee.id" 
+                       target="_blank" 
+                       class="mt-3 flex items-center gap-2 text-gray-300 hover:text-white transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.917 3.917 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.703.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372.85.04 1.12.048 3.297.048s2.448-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372.526-.205.972-.478 1.417-.923.445-.444.719-.89.923-1.416.198-.51.333-1.09.372-1.942.04-.85.048-1.12.048-3.297s-.01-2.448-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.916 3.916 0 0 0-.923-1.417A3.916 3.916 0 0 0 13.24.42c-.51-.198-1.09-.333-1.942-.372C10.448.01 10.172 0 7.998 0h.003zm-.002 1.442c2.146 0 2.389.009 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.282.24.705.275 1.486.037.843.047 1.086.047 3.232s-.01 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.086.047-3.232.047s-2.389-.009-3.232-.047c-.78-.036-1.203-.166-1.485-.276a2.47 2.47 0 0 1-.92-.598 2.47 2.47 0 0 1-.598-.919c-.11-.282-.24-.705-.275-1.485-.038-.843-.047-1.086-.047-3.232s.01-2.389.047-3.232c.035-.78.166-1.204.275-1.486.145-.373.319-.64.599-.92.28-.28.546.453.92-.598.282-.11.705-.24 1.485-.276.843-.037 1.086.046 3.232.046h.002zM8 3.882a4.118 4.118 0 1 0 0 8.236 4.118 4.118 0 0 0 0-8.236zm0 6.76A2.642 2.642 0 1 1 8 5.36a2.642 2.642 0 0 1 0 5.282zm4.935-6.79a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92z"/>
+                        </svg>
+                        <span>tarassocoffee.id</span>
+                    </a>
+                </div>
+            </div>
+            
+            <hr class="border-gray-600 my-8">
+            
+            <div class="text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Tarasso Coffee. All rights reserved. Dibuat dengan ❤️ di Bogor.</p>
+                <p class="mt-2">
+                    Web Design by <a href="https://id.linkedin.com/in/mokhamadabrar" target="_blank" 
+                       rel="noopener noreferrer" class="font-semibold text-gray-300 hover:text-white underline">Abrar</a> Kota Bogor
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- QRIS Modal -->
+    <div id="qris-modal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-2xl p-6 relative w-full max-w-sm text-center">
+            <button id="qris-close-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            
+            <h3 class="text-2xl font-bold text-tarasso-brown mb-4">Scan untuk Membayar</h3>
+            <img src="https://mokhamadabrar.github.io/sciencepark/img/terasso-qris.webp" 
+                 alt="QRIS Pembayaran Tarasso Coffee" 
+                 class="w-full h-auto rounded-lg border-4 border-tarasso-green"
+                 onerror="this.src='https://placehold.co/400x400/2A4A42/FFFFFF?text=QRIS+Error'">
+            <p class="mt-4 text-gray-600">Scan QRIS ini menggunakan aplikasi bank atau e-wallet Anda.</p>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        // Menu Mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const menuMobile = document.getElementById('menu-mobile');
+        
+        menuBtn.addEventListener('click', () => {
+            menuMobile.classList.toggle('hidden');
+        });
+        
+        // QRIS Modal Logic
+        const qrisModal = document.getElementById('qris-modal');
+        const qrisCloseBtn = document.getElementById('qris-close-btn');
+        const qrisTriggers = document.querySelectorAll('.qris-trigger');
+
+        const showQrisModal = () => {
+            qrisModal.classList.remove('hidden');
+        }
+        const hideQrisModal = () => {
+            qrisModal.classList.add('hidden');
+        }
+
+        qrisTriggers.forEach(btn => {
+            btn.addEventListener('click', showQrisModal);
+        });
+
+        qrisCloseBtn.addEventListener('click', hideQrisModal);
+        
+        qrisModal.addEventListener('click', (e) => {
+            if (e.target === qrisModal) {
+                hideQrisModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
